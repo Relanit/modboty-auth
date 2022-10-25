@@ -40,7 +40,7 @@ def index():
         }
         data = db.config.find_one({'_id': 1})
         if user_data['data'][0]['login'] not in data['channels']:
-            error = 'канал не подключён к боту'
+            error = 'бот не подключён к каналу'
 
         if not error and [user for user in data.get('user_tokens', [{}]) if user.get('login', '') == user_data['data'][0]['login']]:
             db.config.update_one({'_id': 1, 'user_tokens.login': user_data['data'][0]['login']}, {'$set': {'user_tokens.$': to_send}})
