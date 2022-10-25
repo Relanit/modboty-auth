@@ -1,0 +1,42 @@
+
+body {
+    margin: 0px;
+    text-align: center;
+    color: white;
+    font-family: Segoe UI;
+}
+
+
+.first {
+    background-color: #242424;
+    height: 44vh;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.second {
+    background-color: #1a1a1a;
+    height: 100%;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    background: url("../../static/img/logo.svg") no-repeat;
+    background-size: contain;
+    margin: auto;
+    width: 300px;
+    min-height: 80px;
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+      width: 200px;
+      min-height: 60px;
+  }
+}
